@@ -317,6 +317,7 @@ object Http4sPlugin extends AutoPlugin {
     val treehugger = "0.4.4"
     val twirl = "1.4.2"
     val vault = "3.0.0-RC2"
+    val zioJson = "0.1.2"
   }
 
   lazy val asyncHttpClient                  = "org.asynchttpclient"    %  "async-http-client"         % V.asyncHttpClient
@@ -392,4 +393,5 @@ object Http4sPlugin extends AutoPlugin {
   lazy val treeHugger                       = "com.eed3si9n"           %% "treehugger"                % V.treehugger
   lazy val twirlApi                         = "com.typesafe.play"      %% "twirl-api"                 % V.twirl
   lazy val vault                            = "org.typelevel"          %% "vault"                     % V.vault
+  lazy val zioJson                          = "dev.zio"                %% "zio-json"                  % V.zioJson
 }

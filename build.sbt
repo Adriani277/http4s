@@ -74,6 +74,7 @@ lazy val modules: List[ProjectReference] = List(
   boopickle,
   circe,
   playJson,
+  zioJson,
   scalaXml,
   twirl,
   scalatags,
@@ -429,6 +430,16 @@ lazy val playJson = libraryProject("play-json")
     libraryDependencies ++= Seq(
       // jawnPlay,
       Http4sPlugin.playJson,
+    ),
+  )
+  .dependsOn(jawn % "compile;test->test")
+
+  lazy val zioJson = libraryProject("zio-json")
+  .settings(
+    description := "Provides ZIO json codecs for http4s",
+    startYear := Some(2018),
+    libraryDependencies ++= Seq(
+      Http4sPlugin.zioJson,
     ),
   )
   .dependsOn(jawn % "compile;test->test")
